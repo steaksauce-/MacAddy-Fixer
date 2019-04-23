@@ -45,59 +45,71 @@ def convertMacAddressToHyphenDelimeted(address):
 macaddyFile = open(args.input, 'r')
 macaddyOutput = open(args.output, 'w')
 
-for address in macaddyFile:
-    if args.intype == "alpha-numeric":
-        if args.outtype == "colon-delimeted":
+
+if args.intype == "alpha-numeric":
+    if args.outtype == "colon-delimeted":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToColonDelimeted(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "hyphen-delimeted":
+    elif args.outtype == "hyphen-delimeted":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToHyphenDelimeted(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "cisco":
+    elif args.outtype == "cisco":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToCisco(address)
             macaddyOutput.write(convertedAddress + "\n")
-        else:
-            print("Cannot convert mac-address to same type!")
-            exit(1)
-    elif args.intype == "colon-delimeted":
-        if args.outtype == "alpha-numeric":
+    else:
+        print("Cannot convert mac-address to same type!")
+        exit(1)
+elif args.intype == "colon-delimeted":
+    if args.outtype == "alpha-numeric":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToAlphaNumeric(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "hyphen-delimeted":
+    elif args.outtype == "hyphen-delimeted":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToHyphenDelimeted(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "cisco":
+    elif args.outtype == "cisco":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToCisco(address)
             macaddyOutput.write(convertedAddress + "\n")
-        else:
-            print("Cannot convert mac-address to same type!")
-            exit(1)
-    elif args.intype == "hyphen-delimeted":
-        if args.outtype == "alpha-numeric":
+    else:
+        print("Cannot convert mac-address to same type!")
+        exit(1)
+elif args.intype == "hyphen-delimeted":
+    if args.outtype == "alpha-numeric":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToAlphaNumeric(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "colon-delimeted":
+    elif args.outtype == "colon-delimeted":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToColonDelimeted(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "cisco":
+    elif args.outtype == "cisco":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToCisco(address)
             macaddyOutput.write(convertedAddress + "\n")
-        else:
-            print("Cannot convert mac-address to same type!")
-            exit(1)
-    elif args.intype == "cisco":
-        if args.outtype == "alpha-numeric":
+    else:
+        print("Cannot convert mac-address to same type!")
+        exit(1)
+elif args.intype == "cisco":
+    if args.outtype == "alpha-numeric":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToAlphaNumeric(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "hyphen-delimeted":
+    elif args.outtype == "hyphen-delimeted":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToHyphenDelimeted(address)
             macaddyOutput.write(convertedAddress + "\n")
-        elif args.outtype == "colon-delimeted":
+    elif args.outtype == "colon-delimeted":
+        for address in macaddyFile:
             convertedAddress = convertMacAddressToColonDelimeted(address)
             macaddyOutput.write(convertedAddress + "\n")
-        else:
-            print("Cannot convert mac-address to same type!")
-            exit(1)
+    else:
+        print("Cannot convert mac-address to same type!")
+        exit(1)
             
                                 
 
