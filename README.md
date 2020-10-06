@@ -25,4 +25,4 @@ C8:6D:81:02:AA:10
 ```
 
 ## Usecase and inspiration for the script
-While scanning the mac-addresses for a large deployment of Aruba Remote APs, I found the the mac-addresses were missing the colons. Unfortunately, to whitelist the APs in the Aruba controller, I needed to have the mac-address with the colons. I took the script a step further and made the output be the list of commands to whitelist each mac-address in the controller. This can be seen in `aruba-usecase.py`.
+While scanning the mac-addresses for a large deployment of Aruba Remote APs, I found the the mac-addresses were missing the colons. Unfortunately, to whitelist the APs in the Aruba controller, I needed to have the mac-address with the colons. I took the script a step further and made the output be the list of commands to whitelist each mac-address in the controller.
